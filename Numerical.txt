@@ -1,0 +1,73 @@
+INPUT NUMERICAL 
+Consider following set of processes for executing practical No:04
+Process Arrival-Time Burst Time
+P1 0 8
+P2 1 3
+P3 2 1
+Calculate average waiting time and average turnaround time for all these process using FCFS algorithm?
+/////////////////////////////////////////////////////////////////////////////////////////////
+EXPECTED OUTPUT
+Enter the number of processes:3
+Enter the Process Name, Arrival Time & Burst Time:p1 0 8
+Enter the Process Name, Arrival Time & Burst Time:p2 1 3
+Enter the Process Name, Arrival Time & Burst Time:p3 2 1
+PName Arrtime Burtime Start TAT Finish
+p1 0 8 0 8 8
+p2 1 3 8 10 11
+p3 2 1 11 10 12
+Average Waiting time:5.333333
+Average Turn Around Time:9.33333
+
+
+INPUT NUMERICAL 
+Consider following set of processes for executing practical No:04, 05 and 06
+Process Arrival-Time Burst Time Priority
+P1 0 8 2
+P2 0 3 1
+P3 0 1 3
+Calculate average waiting time and average turnaround time for all these process using SJF and Priority 
+Scheduling algorithm?
+/////////////////////////////////////////////////////////////////////////////////////////////
+EXPECTED OUTPUT(SJF)
+Enter the number of process:3
+Enter process name, arrival time & execution time:p1 0 8
+Enter process name, arrival time & execution time:p2 0 3
+Enter process name, arrival time & execution time:p3 0 1
+Pname arrivaltime executiontime waitingtime tatime
+p3 0 1 0 1
+p2 0 3 1 4
+p1 0 8 4 12
+Average waiting time is:1.666667
+Average turnaroundtime is:5.666667
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+EXPECTED OUTPUT(Priority)
+Enter the number of process: 3
+Enter process name,arrivaltime,execution time & priority:p1 0 8 2
+Enter process name,arrivaltime,execution time & priority:p2 0 3 1
+Enter process name,arrivaltime,execution time & priority:p3 0 1 3
+Pname arrivaltime executiontime priority waitingtime tatime
+p3 0 1 3 0 1
+p1 0 8 2 1 9
+p2 0 3 1 9 12
+Average waiting time is:3.333333
+Average turnaroundtime is:7.33333
+
+Practical 7
+enter the no of Process 3
+enter the time Quantam 3
+enter pname and estemmed time:p1 10
+enter pname and estemmed time:p2 1
+enter pname and estemmed time:p3 15
+
+total esteemed time :26
+
+
+INPUT NUMERICAL FOR Practical 08(FIFO)
+Calculate page fault rate for below reference string in case of FIFO page replacement algorithm. 
+Assume the memory size of 4 page fames and all frames are initially empty. 0, 2, 1, 6, 4, 0, 1, 0, 3, 1, 
+2, 1
+
+
