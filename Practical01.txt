@@ -1,0 +1,154 @@
+EXPERIMENT NO: 01
+1. EXPERIMENT VISION: Study of various UNIX/LINUX commands with their all important
+options.
+2. OBJECTIVE: To Study various UNIX/LINUX commands and execute them.
+3. THEORY:
+Basic Commands
+I. File and Directory Related commands
+1) pwd
+This command prints the current working directory(Present working directory)
+2) ls
+This command displays the list of files in the current working directory.
+$ls –l Lists the files in the long format
+$ls –t Lists in the order of last modification time
+$ls –d Lists directory instead of contents
+$ls -u Lists in order of last access time
+3) cd
+This command is used to change from the current working directory to any other directory specified.
+$cd directory name
+4) cd ..
+This command is used to come out of the current working directory.
+$cd ..
+5) mkdir
+This command helps us to make a directory.
+$mkdir directoryname
+6) rmdir
+This command is used to remove a directory specified in the command line. It requires the
+specified directory to be empty before removing it.
+$rmdir directoryname
+7) cat
+This command helps us to list the contents of a file we specify.
+$cat [option][file]
+cat > filename – This is used to create a new file.
+cat >>filename – This is used to append the contents of the file
+8) cp
+This command helps us to create duplicate copies of ordinary files.
+$cp source destination
+9) mv
+This command is used to move files.
+$mv source destination
+10) ln
+This command is to establish an additional filename for the same ordinary file.
+$ln firstname secondname
+11) rm
+This command is used to delete one or more files from the directory.
+$rm [option] filename
+$rm –i Asks the user if he wants to delete the file mentioned.
+$rm –r Recursively delete the entire contents of the directory as well as the directory itself.
+
+II) Process and status information commands
+1) who
+This command gives the details of who all have logged in to the UNIX system currently.
+$ who
+2) who am i
+This command tells us as to when we had logged in and the system’s name for the
+connection being used.
+$who am i
+3) date
+This command displays the current date in different formats.
+a) +%D mm/dd/yy
+b) +%w Day of the week
+c) +%H Hr-00 to 23
+d) +%a Abbr.Weekday
+e) +%M Min-00 to 59
+f) +%h Abbr.Month
+g) +%S Sec-00 to 59
+h) +%r Time in AM/PM
+i) +%T HH:MM:SS
+j) +%y Last two digits of the year
+4) echo
+This command will display the text typed from the keyboard.
+$echo
+Eg: $echo Have a nice day
+O/p Have a nice day
+II Text related commands
+1. head
+This command displays the initial part of the file. By default it displays first ten lines of the file.
+$head [-count] [filename]
+2. tail
+This command displays the later part of the file. By default it displays last ten lines of the file.
+$tail [-count] [filename]
+3. wc
+This command is used to count the number of lines, words or characters in a file.
+$wc [-lwc] filename
+4. find
+The find command is used to locate files in a directory and in a subdirectory.
+The –name option
+This lists out the specific files in all directories beginning from the named directory. Wild cards can
+be used.
+The –type option
+This option is used to identify whether the name of files specified are ordinary files or directory files.
+If the name is a directory then use “-type d and if it is a file then use “-type f”.
+The –mtime option
+This option will allow us to find that file which has been modified before or after a specified time.
+The various options available are –mtime n(on a particular day),-mtime +n(before a particular day),-
+mtime –n(after a particular day)
+The –exec option
+This option is used to execute some commands on the files that are found by the find command
+
+IV File Permission commands
+1) chmod
+There are three categories of Users & they have three permissions1) U- User 2) G-Group 3) O-Other
+2) R- Read 2) W-Write 3) E-Execute
+$ chmod u=rwx, g=rx, o=r file1
+Gives permission for read, write and execute to user, read & execute to group and read
+permission to others.
+$ chmod g=wrx file1
+Gives permission for read, write and execute to group.
+$ chmod ugo=rwx file1
+Gives permission for read, write and execute to user, group & others.
+$ chmod u+x file1
+Sets executable permission for users on file1.
+$ chmod u-x file1
+Removes executable permission for users on file1.
+Permissions can also be set and removed with numbers as-
+ Read Write Execute
+7= 4 2 1
+5= 4 0 1
+4= 4 0 0
+$ chmod 777 file1
+Gives full permission to User, group and others
+V Useful Commands:
+1) exit - Ends your work on the UNIX system.
+2) Ctrl-l or clear clears the screen.
+3) Ctrl-c Stops the program currently running.
+4) Ctrl-z Pauses the currently running program.
+5) man COMMAND
+Looks up the UNIX command COMMAND in the online manual pages.
+6) History List all commands typed so far.
+7) more FILE
+Display the contents of FILE, pausing after each screenful.There are several
+keys which control the output once a screenful has been printed.
+<enter> Will advance the output one line at a time.
+<space bar> Will advance the output by another full screenful.
+"q" Will quit and return you to the UNIX prompt.
+8) less FILE
+"less" is a program similar to "more", but which allows backward movement in the
+file as well as forward movement.
+9) lpr FILE
+To print a UNIX text or PostScript file, type the following command at the system
+prompt
+
+10) Meta characters
+Some special characters, called metacharacters may be used to specify multiple
+filenames. These characters substitute filenames or parts of filenames.
+The “*” This character is used to indicate any character(s)
+$ cat ap*
+This displays the contents of all files having a name starting with ap followed
+by any number of characters.
+The “?” This character replaces any one character in the filename.
+$ ls ?st
+list all files starting with any character followed by st.
+The [ ] These are used to specify range of characters.
+$ ls [a-z]pple
+Lists all files having names starting with any character from a to z
