@@ -1,0 +1,86 @@
+//fork system call
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
+int main(){
+    int id;
+    id==fork();
+    if(id==0){
+        printf("Parent Process\n");
+    }
+    else{
+        printf("Child Process\n");
+    }
+    return 0;
+}
+
+
+//getpid & getpppid System calls
+#include <stdio.h>
+int main(){
+    int pid,ppid;
+    pid=getpid();
+    ppid=getppid();
+    
+    printf("Process Id is %d\n",pid);
+    printf("Parent Process ID is %d",ppid);
+    
+    return 0;
+} 
+
+//wait system call
+#include <stdio.h>
+#include <sys/wait.h>
+#include <unistd.h>
+
+int main(){
+    int id;
+    id=fork();
+    if(id==0){
+        printf("Hc:Hello from Child\n");
+    }
+    else{
+        printf("HP:Hello from Parents\n");
+        wait(NULL);
+        printf("CT:Child has Terminated\n");
+    }
+    printf("Bye\n");
+
+    return 0;
+}
+
+//sleep() System call
+#include <stdio.h>
+main(){
+    printf("Sleeping for 1 second.\n");
+    sleep(1);
+    return 0;
+}
+
+//Execl() sytem call
+// it gives the path of the executable file
+#include <unistd.h>
+int main(void){
+    char*binaryPath="/bin/ls";
+    char*arg1="-ln";
+    char*arg2="/home";
+    execl(binaryPath,binaryPath,arg1,arg2,NULL);
+    
+    return 0;
+}
+
+//exit system call
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () {
+   printf("Start of the program....\n");
+   
+   printf("Exiting the program....\n");
+   exit(0);
+
+   printf("End of the program....\n");
+
+   return(0);
+}
